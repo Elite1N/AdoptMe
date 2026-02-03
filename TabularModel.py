@@ -56,5 +56,4 @@ class TabularModel:
             raise Exception("Model not trained yet!")
         
         processed_df = self.preprocess(df)
-        
-        return self.model.predict_proba(processed_df)
+        return self.model.predict_proba(processed_df) # This gives array of prediction (5 labels) as np.array
