@@ -17,11 +17,12 @@ class TabularModel:
     
         # Description length
         df['description_length'] = df['Description'].str.len().fillna(0)
-    
+        
+        # TODO: more feature
         # Drop unused columns
         cols_to_drop = ['Name', 'PetID', 'RescuerID', 'Description']
         df.drop(cols_to_drop, axis=1, inplace=True)
-        
+        #TODO: embed categorical
         return df
 
     
